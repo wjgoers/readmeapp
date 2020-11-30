@@ -1,7 +1,8 @@
-const inquirer = inquirer('inquirer')
+const inquirer = require('inquirer')
+const generateMarkdown = require('./generateMarkdown.js')
+const fs = require('fs')
 
-inquirer
-    .prompt([
+const questions = [
         {
             type: 'input',
             message: 'What is your github username?',
@@ -34,14 +35,26 @@ inquirer
         },
         {
             type: 'input',
-            message: 'Provide Conribution Guidelines',
+            message: 'Provide Any Conribution Guidelines',
             name: 'contribution',
         },
         {
             type: 'list',
             message: 'Choose a project license',
-            choices: ['?'],
+            choices: ["MIT", "APACHE 2.0", "GPL 3.0", "BSD 3", "None"],
             name: 'license'
         },
-    ])
+    ]
+        function printReadMe() {
+            inquirer.prompt(questions).then((answers) => {
+                fs.writeFile('README.md', generateMarkdown(answers), error => {
+                    error 
+                    ? console.log(error) 
+                    : console.log('Read me created!')
+                }) 
+              });
+        }
 
+        printReadMe()
+
+    
