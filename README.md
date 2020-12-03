@@ -1,23 +1,25 @@
-# Bill 
 
-            # **Bill** 
+            # readmeapp 
 
-            ## Bill 
+            # wjgoers
+
+            ## wjgoers@gmail.com 
 
             Table of Contents 
 
             ## Description
-            Bill
+            An app that will automatically generate a readme for projects. 
 
             ## User Instructions
-            Bill
+            To generate a README, run the npm install in order to install the npm package inquirer. Inquirer will prompt a user for inputs from the command line. 
 
             ## Usage Examples
-            Bill
+            This is the first example. 
 
             ## Contributions
-            Bill
+            None
 
             ## License 
-            GPL 3.0
+            None
+
             
